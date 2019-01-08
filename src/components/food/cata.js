@@ -1,6 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text,Image } from '@tarojs/components'
-import {AtTabs, AtTabsPane } from "taro-ui"
+//import {AtTabs, AtTabsPane } from "taro-ui"
+import { getEvent } from '../../utils/common'
+let event = getEvent()
 import './cata.less'
 class Cata extends Component{
     constructor(){
@@ -23,11 +25,13 @@ class Cata extends Component{
                 this.setState({selectCata:item},()=>{
                     this.props.onChangeCata&&this.props.onChangeCata(this.state.selectCata)
                })
+               event.emit("changeCata");
                
            }else if(!this.state.selectCata){
                 this.setState({selectCata:item},()=>{
                     this.props.onChangeCata&&this.props.onChangeCata(this.state.selectCata)
-             })
+                })
+                event.emit("changeCata");
            }
     }
     render(){

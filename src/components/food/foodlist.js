@@ -1,5 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Text,Image } from '@tarojs/components'
+import AddCut from '../addcut/addcut';
 import './footlist.less';
 class FoodList extends Component{
     constructor(){
@@ -21,6 +22,7 @@ class FoodList extends Component{
                             <Text >{item.title}</Text>
                             <Text>月售：{item.sole}</Text>
                             <Text>￥{item.price}</Text>
+                            <AddCut food={item}/>
                             </View>   
                   </View>)
               }) 

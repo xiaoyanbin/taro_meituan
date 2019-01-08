@@ -3,6 +3,7 @@ import { View, Text,Input,Button } from '@tarojs/components'
 import './index.less'
 import Head from '../../components/head/head'
 import Food from '../../components/food/food'
+import Bottom from '../../components/bottom/bottom'
 export default class Index extends Component {
 
   config = {
@@ -31,6 +32,7 @@ export default class Index extends Component {
       <View className="login-page" id="login-page">
         <Head/>
         <Food/>
+        <Bottom/>
       </View>
     )
   }
