@@ -6,4 +6,7 @@ npm install -g @tarojs/cli
 
 cnpm install
 
-npm run dev:h5
+npm run dev:h5    // 启动h5
+
+
+npm run dev:weapp //启动小程序的 
